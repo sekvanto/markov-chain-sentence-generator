@@ -4,9 +4,7 @@
 
 /**
  * Takes a vector dictionary and a line, 
- * then adds words from the line to it
- *
- * @param dict The resulting dictionary
+ * then adds words from the line to dictionary
  */
 void addWords(std::vector<std::string> &dict,
               std::string line)
@@ -26,9 +24,7 @@ void addWords(std::vector<std::string> &dict,
 /**
  * This method takes a vector dictionary and a
  * filename, reads the file and adds separate words from
- * file to vector.
- *
- * @param dict The resulting dictionary
+ * file to dictionary.
  */
 void getDictionary(std::vector<std::string> &dict,
                    std::string filePath)

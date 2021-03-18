@@ -16,9 +16,6 @@ std::string chooseAndCropNgram(std::vector<std::string>);
 /**
  * This method takes dictionary, generates ngrams from words
  * and uses them to build a random sentence
- *
- * @param bodyWords A dictionary 
- * @return Generated sentence
  */
 std::string getSentence(std::vector<std::string> dict) {
     if (ORDER < 2) {
@@ -33,9 +30,6 @@ std::string getSentence(std::vector<std::string> dict) {
 
 /**
  * Takes a dictionary and generates ngrams from it
- *
- * @param bodyWords A dictionary
- * @return Ngrams
  */
 std::vector<std::string> makeNgrams(std::vector<std::string> dict) {
     std::vector<std::string> result;
@@ -51,10 +45,7 @@ std::vector<std::string> makeNgrams(std::vector<std::string> dict) {
 }
 
 /**
- * Takes ngrams, builds a sentence out of it
- *
- * @param ngrams Ngrams
- * @return Generated sentence ;D
+ * Takes ngrams, builds a random sentence out of it
  */
 std::string buildSentence(std::vector<std::string> ngrams) {
     std::string result = "";
