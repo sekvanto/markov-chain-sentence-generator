@@ -29,7 +29,7 @@ int main () {
         cout << SEPARATOR << clean(getSentence(dict)) << endl;
     else
         //doShitPost();
-        cout << "TODO" << endl;
+        cout << "Sorry, not implemented yet" << endl;
     return 0;
 }
 
