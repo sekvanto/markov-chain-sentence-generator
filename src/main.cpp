@@ -24,8 +24,8 @@ int main () {
     string filePath = getSourcePath();
     vector<string> dict;
     getDictionary(dict, filePath);
-    int choice = chooseOption();
-    if (choice == NORMAL)
+    int mode = chooseOption();
+    if (mode == NORMAL)
         cout << SEPARATOR << clean(getSentence(dict)) << endl;
     else
         //doShitPost();
