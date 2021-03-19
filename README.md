@@ -58,3 +58,5 @@ Currently, the program supports only unix-like operating systems
 Execute a compiled binary. You will need to choose a source file of text, then the mode (normal/shitpost):
 
 ![example](images/example2.png)
+
+If you want to add new source files, add them to assets/
