@@ -12,18 +12,22 @@ E.g. we have a dictionary ["in", "the", "area", "of", "the", "south"] generated 
 
 Next, ngrams are generated from the dictionary. An example of all possible 2-order ngrams:
 
+```
 in the
 the area
 area of
 of the
 the south
+```
 
 One ngram is randomly chosen. For example, let it be "in the"
 
 Next, we choose "good" ngrams from the list - these, the first word of which starts with "the" (to continue current sentence):
 
+```
 the area
 the south
+```
 
 We randomly choose one of them. Let it be "the south". Now we add it to the sentence, and get:
 
