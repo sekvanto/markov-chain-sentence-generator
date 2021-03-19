@@ -5,14 +5,11 @@
 
 #include "../headers/dictionarycreator.h"
 #include "../headers/sentencegenerator.h"
-//#include "../headers/shitposter.h"
+#include "../headers/shitposter.h"
+#include "../headers/constants.h"
 using namespace std;
 namespace fs = std::filesystem;
 
-/* Default directory where source text files are placed */
-const string DEFAULT_PATH = "assets/";
-/* Default separator between strings ;D */
-const string SEPARATOR = "--------------------------------------------------\n";
 /* Mode codes */
 enum mode { NORMAL, SHITPOST };
 
@@ -28,8 +25,7 @@ int main () {
     if (mode == NORMAL)
         cout << SEPARATOR << clean(getSentence(dict)) << endl;
     else
-        //doShitPost();
-        cout << "Sorry, not implemented yet" << endl;
+        doShitPost(dict);
     return 0;
 }
 

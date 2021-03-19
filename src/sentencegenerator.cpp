@@ -1,11 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <ctime>
-
-/* Order of ngrams, 2 or more! */
-const int ORDER = 2;
-/* Maximum sentence length in words */
-const int MAX_SEN_LEN = 15;
+#include "../headers/constants.h"
 
 std::vector<std::string> makeNgrams(std::vector<std::string>);
 std::string buildSentence(std::vector<std::string>);
