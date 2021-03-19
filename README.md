@@ -33,6 +33,28 @@ We randomly choose one of them. Let it be "the south". Now we add it to the sent
 
 "in the south"
 
-Unfortunately, there is no ngrams, which start with "south", so we add a dot and output a finished sentence. If we use long text, e.g. books, we got much more possible interesting combinations ;D
+Unfortunately, there is no ngrams, which start with "south", so we add a dot and output a finished sentence. If we use long text, e.g. books, we get much more possible interesting combinations ;D
 
-![test](images/example1.jpg)
+![example](images/example1.jpg)
+
+## How to install
+For installation you need a C++ compiler which supports C++17. Clone the repository to your computer:
+
+```
+git clone https://github.com/sekvanto/markov-chain-sentence-generator
+cd markov-chain-sentence-generator
+```
+
+Then compile the project (need to include all files in src/). Example for g++:
+
+```
+g++ -std=c++17 src/* -o bin
+```
+
+Currently, the program supports only unix-like operating systems
+
+## Usage
+
+Execute a compiled binary. You will need to choose a source file of text, then the mode (normal/shitpost):
+
+![example](images/example2.png)
