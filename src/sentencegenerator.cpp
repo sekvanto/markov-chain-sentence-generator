@@ -45,8 +45,8 @@ std::vector<std::string> makeNgrams(std::vector<std::string> dict) {
  */
 std::string buildSentence(std::vector<std::string> ngrams) {
     std::string result = "";
-    srand(time(0));
-    int firstPiece = rand() % ngrams.size(); /* Generating first N words randomly */
+    srand((unsigned int) time(0));
+    auto firstPiece = rand() % ngrams.size(); /* Generating first N words randomly */
     result = ngrams[firstPiece];
     while (spacesIn(result) < MAX_SEN_LEN) {
         std::vector<std::string> goodNgrams;
@@ -71,8 +71,8 @@ std::string buildSentence(std::vector<std::string> ngrams) {
  */
 std::string getLastWord(std::string str) {
     std::string word = "";
-    int len = str.length();
-    for (int i = len - 1; str[i] != ' '; i--) { /* Going until we meet a space */
+    auto len = str.length();
+    for (auto i = len - 1; str[i] != ' '; i--) { /* Going until we meet a space */
         word = str[i] + word;
     }
     return word;
@@ -93,13 +93,13 @@ int spacesIn(std::string str) {
  * first word from it and returns it
  */
 std::string chooseAndCropNgram(std::vector<std::string> ngrams) {
-    srand(time(0));
-    int randomIndex = rand() % ngrams.size();
+    srand((unsigned int) time(0));
+    auto randomIndex = rand() % ngrams.size();
     std::string ngram = ngrams[randomIndex];
     std::string result = "";
-    int firstSpace = ngram.find(' ');
-    int len = ngram.size();
-    for (int i = len - 1; i >= firstSpace; i--)
+    auto firstSpace = ngram.find(' ');
+    auto len = ngram.size();
+    for (auto i = len - 1; i >= firstSpace; i--)
         result = ngram[i] + result;
     return result;
 }
