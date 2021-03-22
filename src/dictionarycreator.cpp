@@ -10,7 +10,7 @@ void addWords(std::vector<std::string> &dict,
               std::string line)
 {
     std::string word = "";
-    for (int i = 0; i < line.length(); i++) {
+    for (unsigned int i = 0; i < line.length(); i++) {
         /* Time to add a word? */
         if (line[i] == ' ' && word != "") {
             dict.push_back(word);

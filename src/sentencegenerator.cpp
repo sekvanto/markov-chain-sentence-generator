@@ -29,7 +29,7 @@ std::string getSentence(std::vector<std::string> dict) {
  */
 std::vector<std::string> makeNgrams(std::vector<std::string> dict) {
     std::vector<std::string> result;
-    for (int i = 0; i <= dict.size() - ORDER; i++) {
+    for (unsigned int i = 0; i <= dict.size() - ORDER; i++) {
         std::string ngram = dict[i] + " ";
         for (int j = 1; j < ORDER; j++) {
             ngram += dict[i + j]; /* Add next word(-s) to ngram */
@@ -83,7 +83,7 @@ std::string getLastWord(std::string str) {
  */
 int spacesIn(std::string str) {
     int counter = 0;
-    for (int i = 0; i < str.length(); i++)
+    for (unsigned int i = 0; i < str.length(); i++)
         if (str[i] == ' ') counter++;
     return counter;
 }

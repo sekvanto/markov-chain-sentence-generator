@@ -11,7 +11,7 @@
 std::string crop(std::string str) {
     int spaces = 0;
     std::string result = "";
-    for (int i = 0; i < str.length(); i++) {
+    for (unsigned int i = 0; i < str.length(); i++) {
         if (str[i] == ' ')
             spaces++;
         if (spaces == MAX_SHORT_SEN_LEN)

@@ -48,7 +48,7 @@ string getSourcePath() {
         cout << "Your current directory doesn't contain " << DEFAULT_PATH << endl;
         exit(EXIT_FAILURE);
     }
-    int choice_index;
+    unsigned int choice_index;
     cout << "Your choice (default is 0): ";
     cin >> choice_index;
     if (choice_index >= entries.size())
@@ -77,7 +77,7 @@ int chooseOption() {
 string clean(string str) {
     string result = "";
     result += str[0];
-    for (int i = 1; i < str.length(); i++) {
+    for (unsigned int i = 1; i < str.length(); i++) {
         if (str[i] == '\t') /* Replacing tabs with spaces */
             str[i] = ' ';
         if (str[i] == ' ' && str[i-1] == ' ')
