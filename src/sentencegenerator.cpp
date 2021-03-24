@@ -45,7 +45,7 @@ std::vector<std::string> makeNgrams(std::vector<std::string> dict) {
  */
 std::string buildSentence(std::vector<std::string> ngrams) {
     std::string result = "";
-    srand((unsigned int) time(0));
+    srand(static_cast<unsigned>(time(0)));
     auto firstPiece = rand() % ngrams.size(); /* Generating first N words randomly */
     result = ngrams[firstPiece];
     while (spacesIn(result) < MAX_SEN_LEN) {
@@ -93,7 +93,7 @@ int spacesIn(std::string str) {
  * first word from it and returns it
  */
 std::string chooseAndCropNgram(std::vector<std::string> ngrams) {
-    srand((unsigned int) time(0));
+    srand(static_cast<unsigned>(time(0)));
     auto randomIndex = rand() % ngrams.size();
     std::string ngram = ngrams[randomIndex];
     std::string result = "";
