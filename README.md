@@ -1,5 +1,5 @@
 # Markov chain sentence generator
-This console program takes a text file, trains based on the content, and produces a random string by a Markov chain ;D.
+This console program takes a text file, trains based on the content, and produces a random string by a Markov chain.
 
 There are 2 modes:
 1. Normal mode - Generates only one sentence
@@ -33,7 +33,7 @@ We randomly choose one of them. Let it be "the south". Now we add it to the sent
 
 "in the south"
 
-Unfortunately, there is no ngrams, which start with "south", so we add a dot and output a finished sentence. If we use long text, e.g. books, we get much more possible interesting combinations ;D
+Unfortunately, there is no ngrams, which start with "south", so we add a dot and output a finished sentence. If we use long text, e.g. books, we get much more possible interesting combinations
 
 ![example](images/example1.jpg)
 
