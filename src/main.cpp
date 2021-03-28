@@ -23,7 +23,7 @@ int main () {
     getDictionary(dict, filePath);
     int mode = chooseOption();
     if (mode == NORMAL)
-        cout << << SEPARATOR << "\n" << clean(getSentence(dict)) << "\n\n";
+        cout << SEPARATOR << "\n" << clean(getSentence(dict)) << "\n\n";
     else
         doShitPost(dict);
     return 0;
