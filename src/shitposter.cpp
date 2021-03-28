@@ -28,13 +28,13 @@ std::string crop(std::string str) {
  */
 void doShitPost(std::vector<std::string> dict) {
     while (true) {
-        std::cout << SEPARATOR;
+        std::cout << SEPARATOR << "\n";
         for(int i = 0; i < SENTENCES_BLOCK; i++) {
             std::cout << crop(getSentence(dict)) << std::endl;
             std::this_thread::sleep_for(std::chrono::milliseconds(PAUSE));
         }
         std::string choice;
-        std::cout << SEPARATOR << "Wanna continue more? ;D\ny/n: ";
+        std::cout << SEPARATOR << "\nWanna continue more? ;D\ny/n: ";
         std::cin >> choice;
         if (choice != "y") break;
     }

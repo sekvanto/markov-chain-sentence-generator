@@ -4,7 +4,7 @@
 /* Default directory where source text files are placed */
 const std::string DEFAULT_PATH = "assets/";
 /* Default separator between strings ;D */
-const std::string SEPARATOR = "--------------------------------------------------\n";
+const std::string SEPARATOR = "------------------------------------------------------------------------------";
 /* Order of ngrams, 2 or more! */
 const int ORDER = 2;
 /* Maximum sentence length in words */

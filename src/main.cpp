@@ -22,8 +22,16 @@ int main () {
     vector<string> dict;
     getDictionary(dict, filePath);
     int mode = chooseOption();
-    if (mode == NORMAL)
-        cout << SEPARATOR << "\n" << clean(getSentence(dict)) << "\n\n";
+    if (mode == NORMAL) {
+        string stop = "n";
+        cout << SEPARATOR << "\n\n\n";
+        while (stop != "y") {
+            cout << clean(getSentence(dict)) << "\n\n\n";
+            cout << SEPARATOR << " exit? (y/n): ";
+            cin >> stop;
+            cout << "\n\n";
+        }
+    }
     else
         doShitPost(dict);
     return 0;
@@ -35,7 +43,7 @@ int main () {
  * and returns the name of a chosen file
  */
 string getSourcePath() {
-    cout << "Choose the source file:\n" << SEPARATOR << "Available files:" << endl;
+    cout << "Choose the source file:\n" << SEPARATOR << "\nAvailable files:" << endl;
     int iter = 0;
     vector<string> entries;
     try {
@@ -62,7 +70,7 @@ string getSourcePath() {
  */
 int chooseOption() {
     int result;
-    cout << SEPARATOR << "Your options are:\n"
+    cout << SEPARATOR << "\nYour options are:\n"
          << "[" << NORMAL << "] Normal mode\n"
          << "[" << SHITPOST << "] Shitpost mode\n"
          << "Your choice (default is 0): ";
