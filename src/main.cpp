@@ -13,27 +13,27 @@ namespace fs = std::filesystem;
 /* Mode codes */
 enum mode { NORMAL, SHITPOST };
 
-string getSourcePath();
-int chooseOption();
+string get_source_path();
+int choose_option();
 string clean(string);
 
 int main () {
-    string filePath = getSourcePath();
+    string file_path = get_source_path();
     vector<string> dict;
-    getDictionary(dict, filePath);
-    int mode = chooseOption();
+    get_dictionary(dict, file_path);
+    int mode = choose_option();
     if (mode == NORMAL) {
         string stop = "n";
         cout << SEPARATOR << "\n\n\n";
         while (stop != "y") {
-            cout << clean(getSentence(dict)) << "\n\n\n";
+            cout << clean(get_sentence(dict)) << "\n\n\n";
             cout << SEPARATOR << " exit? (y/n): ";
             cin >> stop;
             cout << "\n\n";
         }
     }
     else
-        doShitPost(dict);
+        do_shitpost(dict);
     return 0;
 }
 
@@ -42,7 +42,7 @@ int main () {
  * default directory, asks user to choose one of them,
  * and returns the name of a chosen file
  */
-string getSourcePath() {
+string get_source_path() {
     cout << "Choose the source file:\n" << SEPARATOR << "\nAvailable files:" << endl;
     int iter = 0;
     vector<string> entries;
@@ -68,7 +68,7 @@ string getSourcePath() {
  * Asks user what mode to use: normal or shitpost 
  * Returns a chosen value
  */
-int chooseOption() {
+int choose_option() {
     int result;
     cout << SEPARATOR << "\nYour options are:\n"
          << "[" << NORMAL << "] Normal mode\n"

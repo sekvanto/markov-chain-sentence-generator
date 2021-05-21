@@ -26,11 +26,11 @@ std::string crop(std::string str) {
  * a few at a time. This continues
  * until user chooses to break the loop
  */
-void doShitPost(std::vector<std::string> dict) {
+void do_shitpost(std::vector<std::string> dict) {
     while (true) {
         std::cout << SEPARATOR << "\n";
         for(int i = 0; i < SENTENCES_BLOCK; i++) {
-            std::cout << crop(getSentence(dict)) << std::endl;
+            std::cout << crop(get_sentence(dict)) << std::endl;
             std::this_thread::sleep_for(std::chrono::milliseconds(PAUSE));
         }
         std::string choice;

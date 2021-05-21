@@ -6,7 +6,7 @@
  * Takes a vector dictionary and a line, 
  * then adds words from the line to dictionary
  */
-void addWords(std::vector<std::string> &dict,
+void add_words(std::vector<std::string> &dict,
               std::string line)
 {
     std::string word = "";
@@ -26,17 +26,17 @@ void addWords(std::vector<std::string> &dict,
  * filename, reads the file and adds separate words from
  * file to dictionary.
  */
-void getDictionary(std::vector<std::string> &dict,
-                   std::string filePath)
+void get_dictionary(std::vector<std::string> &dict,
+                   std::string file_path)
 {
     std::string line;
-    std::ifstream source(filePath);
+    std::ifstream source(file_path);
     if (!source.is_open()) {
         std::cout << "Unable to open file" << std::endl;
         exit(EXIT_FAILURE);
     }
     while (getline (source, line)) {
-        addWords(dict, line);
+        add_words(dict, line);
     }
     source.close();
 }
